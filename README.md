@@ -21,12 +21,15 @@ Usage: **(detect target encodingname-when-unknown)**
 
 **return:**
    encoding name or nil when target encoding cannot be detected.
+
 **target:**
    Whatever clojure.java.io/input-stream can deal with.
    (File, filename(String), InputStream, BufferedStream etc)
    **Target stream is closed automatically.**
+
 **encodingname-when-unknown:**
    Return this value when target encoding cannot be detected.
+
    **:default** means the default charset of this Java virtual machine.
 
 What encodings can be detected?
