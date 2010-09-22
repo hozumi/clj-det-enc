@@ -28,7 +28,7 @@ Usage: **(detect target encodingname-when-unknown)**
 **encodingname-when-unknown:**<br>
    Return this value when target encoding cannot be detected.<br>
   -  **:default** means the default charset of this Java virtual machine.
-<br><br>
+<br>
 What encodings can be detected?
 See [juniversalchardet](http://code.google.com/p/juniversalchardet/)
 
