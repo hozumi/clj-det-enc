@@ -1,6 +1,6 @@
 # detect-encoding-clj
 
-Detect-encoding-clj is a encoding detector using juniversalchardet java library.
+Detect-encoding-clj is a encoding detector using [juniversalchardet](http://code.google.com/p/juniversalchardet/) java library.
 
 ## Usage
     (use 'detect-encoding-clj.core)
@@ -19,19 +19,16 @@ Usage: **(detect target encodingname-when-unknown)**
     (detect "unknownB.txt" :default)
     => "SHIFT_JIS"
 
-**return:**
-   encoding name or nil when target encoding cannot be detected.
-
-**target:**
-   Whatever clojure.java.io/input-stream can deal with.
-   (File, filename(String), InputStream, BufferedStream etc)
-   **Target stream is closed automatically.**
-
-**encodingname-when-unknown:**
-   Return this value when target encoding cannot be detected.
-
-   **:default** means the default charset of this Java virtual machine.
-
+**return:**<br>
+   encoding name or nil when target encoding cannot be detected.<br>
+**target:**<br>
+   Whatever clojure.java.io/input-stream can deal with.<br>
+   (File, filename(String), InputStream, BufferedStream etc)<br>
+   Target stream is closed automatically.<br>
+**encodingname-when-unknown:**<br>
+   Return this value when target encoding cannot be detected.<br>
+  -  **:default** means the default charset of this Java virtual machine.
+<br><br>
 What encodings can be detected?
 See [juniversalchardet](http://code.google.com/p/juniversalchardet/)
 
