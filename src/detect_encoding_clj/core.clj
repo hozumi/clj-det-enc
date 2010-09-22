@@ -1,6 +1,6 @@
 (ns
   ^{:author "Takahiro Hozumi",
-    :doc "A detect encoding utility. juniversalchardet wrapper."}
+    :doc "A detect encoding utility. juniversalchardet wrapper for Clojure."}
   detect-encoding-clj.core
   (:require [clojure.java.io :as io :only [input-stream]])
   (:import [org.mozilla.universalchardet UniversalDetector]
