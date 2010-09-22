@@ -22,16 +22,16 @@
    
    Usage: (detect target)
 
-   (detect \"unknownA.txt\")
+   (detect \"utf8.txt\")
    => \"UTF-8\"
-   (detect \"unknownB.txt\")
+   (detect \"unknown.txt\")
    => nil
 
    Usage: (detect target encodingname-when-unknown)
 
-   (detect \"unknownB.txt\" \"EUC-JP\")
+   (detect \"unknown.txt\" \"EUC-JP\")
    => \"EUC-JP\"
-   (detect \"unknownB.txt\" :default)
+   (detect \"unknown.txt\" :default)
    => \"SHIFT_JIS\"
 
    return : encoding name or nil when target encoding cannot be detected.
@@ -44,7 +44,7 @@
 
    What encodings can be detected?
    See http://code.google.com/p/juniversalchardet/"
-  ([target]
+  ([Target]
      (detect target nil))
   ([target encodingname-when-unknown]
      (let [buf       (make-array Byte/TYPE 4096)

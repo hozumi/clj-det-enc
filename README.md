@@ -7,16 +7,16 @@ Detect-encoding-clj is a encoding detector using [juniversalchardet](http://code
 
 Usage: **(detect target)**
 
-    (detect "unknownA.txt")
+    (detect "utf8.txt")
      => "UTF-8"
-    (detect "unknownB.txt")
+    (detect "unknown.txt")
      => nil
 
 Usage: **(detect target encodingname-when-unknown)**
 
-    (detect "unknownB.txt" "EUC-JP")
+    (detect "unknown.txt" "EUC-JP")
     => "EUC-JP"
-    (detect "unknownB.txt" :default)
+    (detect "unknown.txt" :default)
     => "SHIFT_JIS"
 
 **return:**<br>
