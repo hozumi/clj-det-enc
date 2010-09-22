@@ -44,7 +44,7 @@
 
    What encodings can be detected?
    See http://code.google.com/p/juniversalchardet/"
-  ([Target]
+  ([target]
      (detect target nil))
   ([target encodingname-when-unknown]
      (let [buf       (make-array Byte/TYPE 4096)
