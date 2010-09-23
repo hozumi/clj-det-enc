@@ -48,15 +48,11 @@
      (detect target nil))
   ([target encodingname-when-unknown]
      (let [buf       (make-array Byte/TYPE 4096)
-	   detector  (UniversalDetector. nil)
-	   istream   (io/input-stream target)]
-       (try
+	   detector  (UniversalDetector. nil)]
+       (with-open [istream (io/input-stream target)]
 	 (dorun (judge-seq! buf istream detector))
 	 (.dataEnd detector)
 	 (or (.getDetectedCharset detector)
 	     (if (= encodingname-when-unknown :default)
 	       (.displayName (Charset/defaultCharset))
-	       encodingname-when-unknown))
-	 (finally
-	  (.close istream)
-	  (.reset detector))))))
+	       encodingname-when-unknown))))))
