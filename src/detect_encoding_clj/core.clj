@@ -12,9 +12,8 @@
 		      (not (do (.handleData detector buf 0 n)
 			       (.isDone detector))))]
     (if proceed?
-      (cons proceed?
-	    (judge-seq! buf istream detector))
-      (cons proceed? ()))))
+      (recur buf istream detector)
+      nil)))
 
 (defn detect
   "Attempts to detect the encoding of a text by using juniversalchardet java library.
