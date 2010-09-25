@@ -7,15 +7,14 @@
 	   [java.nio.charset Charset]))
 
 (defn- judge-seq! [buf istream detector]
-  (lazy-seq
-   (let [n        (.read istream buf)
-	 proceed? (and (> n 0)
-		       (not (do (.handleData detector buf 0 n)
-				(.isDone detector))))]
-     (if proceed?
-       (cons proceed?
-	     (judge-seq! buf istream detector))
-       (cons proceed? ())))))
+  (let [n        (.read istream buf)
+	proceed? (and (> n 0)
+		      (not (do (.handleData detector buf 0 n)
+			       (.isDone detector))))]
+    (if proceed?
+      (cons proceed?
+	    (judge-seq! buf istream detector))
+      (cons proceed? ()))))
 
 (defn detect
   "Attempts to detect the encoding of a text by using juniversalchardet java library.
