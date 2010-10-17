@@ -1,4 +1,4 @@
-(defproject detect-encoding-clj "1.0.0-SNAPSHOT"
+(defproject org.clojars.hozumi/clj-det-enc "1.0.0-SNAPSHOT"
   :description "A detect encoding utility. juniversalchardet wrapper for Clojure."
   :dependencies [[org.clojure/clojure "1.2.0"]
                  [org.clojure/clojure-contrib "1.2.0"]
