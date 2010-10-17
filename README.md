@@ -3,7 +3,7 @@
 Detect-encoding-clj is a encoding detector using [juniversalchardet](http://code.google.com/p/juniversalchardet/) java library.
 
 ## Usage
-    (use 'detect-encoding-clj.core)
+    (use 'hozumi.det-enc)
 
 Usage: **(detect target)**
 
@@ -37,4 +37,4 @@ See [juniversalchardet](http://code.google.com/p/juniversalchardet/)
 
 leiningen
 
-    [detect-encoding-clj "1.0.0-SNAPSHOT"]
+    [org.clojars.hozumi/clj-det-enc "1.0.0-SNAPSHOT"]
