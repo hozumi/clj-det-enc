@@ -1,6 +1,6 @@
-# detect-encoding-clj
+# clj-det-enc
 
-Detect-encoding-clj is a encoding detector using [juniversalchardet](http://code.google.com/p/juniversalchardet/) java library.
+clj-det-enc is a encoding detector using [juniversalchardet](http://code.google.com/p/juniversalchardet/) java library.
 
 ## Usage
     (use 'hozumi.det-enc)
