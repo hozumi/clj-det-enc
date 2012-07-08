@@ -4,9 +4,10 @@
   hozumi.det-enc
   (:require [clojure.java.io :as io :only [input-stream]])
   (:import [org.mozilla.universalchardet UniversalDetector]
+           [java.io InputStream]
            [java.nio.charset Charset]))
 
-(defn- judge-seq! [buf istream detector]
+(defn- judge-seq! [buf ^InputStream istream ^UniversalDetector detector]
   (let [n        (.read istream buf)
         proceed? (and (> n 0)
                       (not (do (.handleData detector buf 0 n)
