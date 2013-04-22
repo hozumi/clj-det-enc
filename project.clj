@@ -1,6 +1,5 @@
-(defproject org.clojars.hozumi/clj-det-enc "1.0.0-SNAPSHOT"
+(defproject clj-det-enc "1.0.0"
   :description "A detect encoding utility. juniversalchardet wrapper for Clojure."
-  :dependencies [[org.clojure/clojure "1.2.0"]
-                 [org.mozilla/juniversalchardet "1.0.3"]]
-  :repositories {"archive.org" "http://builds.archive.org:8080/maven2"}
+  :dependencies [[org.clojure/clojure "1.5.1"]
+                 [com.googlecode.juniversalchardet/juniversalchardet "1.0.3"]]
   :warn-on-reflection true)
