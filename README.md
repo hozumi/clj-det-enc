@@ -3,21 +3,25 @@
 clj-det-enc is a encoding detector using [juniversalchardet](http://code.google.com/p/juniversalchardet/) java library.
 
 ## Usage
-    (use 'hozumi.det-enc)
+    (require '[det-enc.core :as det])
 
-Usage: **(detect target)**
+Usage: **(det/detect target)**
 
-    (detect "utf8.txt")
-     => "UTF-8"
-    (detect "unknown.txt")
-     => nil
+```clojure
+(det/detect "utf8.txt")
+;=> "UTF-8"
+(det/detect "unknown.txt")
+;=> nil
+```
 
-Usage: **(detect target encodingname-when-unknown)**
+Usage: **(det/detect target encodingname-when-unknown)**
 
-    (detect "unknown.txt" "EUC-JP")
-    => "EUC-JP"
-    (detect "unknown.txt" :default)
-    => "SHIFT_JIS"
+```clojure
+(det/detect "unknown.txt" "EUC-JP")
+;=> "EUC-JP"
+(det/detect "unknown.txt" :default)
+;=> "SHIFT_JIS"
+```
 
 **return:**<br>
    encoding name or nil when target encoding cannot be detected.<br>
@@ -37,4 +41,6 @@ See [juniversalchardet](http://code.google.com/p/juniversalchardet/)
 
 leiningen
 
-    [org.clojars.hozumi/clj-det-enc "1.0.0-SNAPSHOT"]
+```clojure
+[org.clojars.hozumi/clj-det-enc "1.0.0-SNAPSHOT"]
+```
