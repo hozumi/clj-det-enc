@@ -42,5 +42,5 @@ See [juniversalchardet](http://code.google.com/p/juniversalchardet/)
 leiningen
 
 ```clojure
-[org.clojars.hozumi/clj-det-enc "1.0.0-SNAPSHOT"]
+[clj-det-enc "1.0.0"]
 ```
