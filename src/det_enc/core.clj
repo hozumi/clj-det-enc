@@ -1,7 +1,7 @@
 (ns
     ^{:author "Takahiro Hozumi",
       :doc "A detect encoding utility. juniversalchardet wrapper for Clojure."}
-  hozumi.det-enc
+  det-enc.core
   (:require [clojure.java.io :as io :only [input-stream]])
   (:import [org.mozilla.universalchardet UniversalDetector]
            [java.io InputStream]

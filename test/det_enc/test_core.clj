@@ -1,5 +1,5 @@
-(ns hozumi.test-det-enc
-  (:use [hozumi.det-enc] :reload)
+(ns det-enc.test-core
+  (:use [det-enc.core] :reload)
   (:use [clojure.test])
   (:require [clojure.java.io :as io :only [input-stream]])
   (:import [java.io File]))
